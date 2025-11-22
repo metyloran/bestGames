@@ -1,0 +1,150 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #062c22;
+color: white;
+}
+header {
+padding: 16px;
+background: #064e3b;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.small { padding: 6px 12px; width: auto; }
+#search {
+margin: 16px;
+padding: 10px;
+width: calc(100% - 32px);
+border-radius: 6px;
+border: none;
+}
+#grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+gap: 16px;
+padding: 16px;
+}
+.card {
+background: #065f46;
+padding: 12px;
+border-radius: 10px;
+transition: 0.2s;
+}
+.card:hover {
+background: #0d8a63;
+}
+.card img {
+width: 100%;
+border-radius: 8px;
+}
+.btn {
+margin-top: 6px;
+padding: 8px;
+width: 100%;
+background: #059669;
+color: #062c22;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-weight: bold;
+transition: background 0.2s;
+}
+.btn:hover { background: #0ddb97; }
+.btn.active { background: #34d399; color: #003322; }
+.btn.secondary { background: #074434; color: #b6e2cc; }
+.hidden { display: none; }
+
+
+/* МЕНЮ */
+.menu ul {
+list-style: none;
+display: flex;
+gap: 20px;
+padding: 0;
+}
+.menu a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+}
+.dropdown {
+position: relative;
+}
+.dropdown-menu {
+position: absolute;
+top: 25px;
+left: 0;
+background: #046b52;
+padding: 10px;
+border-radius: 8px;
+list-style: none;
+display: none;
+flex-direction: column;
+width: 150px;
+}
+.dropdown-menu li {
+margin: 6px 0;
+}
+.dropdown:hover .dropdown-menu {
+display: flex;
+}
+/* Модалки */
+.modal {
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.6);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.modal-content {
+background: #064e3b;
+padding: 20px;
+border-radius: 10px;
+width: 300px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+input {
+padding: 8px;
+border-radius: 6px;
+border: none;
+}
+#account {
+padding: 20px;
+background: #043f32;
+margin: 16px;
+border-radius: 10px;
+}
+.footer{
+    margin: 0 auto;
+    background-color: #093d2f;
+    height: 230px;
+    display: flex;
+    margin-top: 20%;
+    bottom: 0; /* Прижимаем к нижнему краю */
+    width: 100%;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  background: #065f46;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  z-index: 99;
+}
+.contact a{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.modal.hidden {
+  display: none !important;
+}
